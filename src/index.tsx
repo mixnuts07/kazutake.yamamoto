@@ -1,31 +1,45 @@
-import React from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
+import "./App.css";
+import "./Loading.css";
 import reportWebVitals from "./reportWebVitals";
-import { createTheme } from "@mui/material/styles";
-import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
+import ReactLoading from "react-loading";
+const App = lazy(() => import("./App"));
 
-let theme = createTheme({
-  palette: {
-    primary: {
-      main: "#42a5f5",
-      light: "#1976d2",
-      dark: "#1565c0",
-    },
-  },
-});
+const Loading = () => {
+  const [changeDisplay, setChangeDisplay] = useState(false);
+  if (!changeDisplay)
+    return (
+      <div className="loading-app">
+        <button
+          className="visit-button"
+          onClick={() => setTimeout(setChangeDisplay, 200, true)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <p className="visit-text">VISIT</p>
+        </button>
+      </div>
+    );
+  return (
+    <div className="loading-app">
+      <Suspense
+        fallback={
+          <ReactLoading type="bars" color="#f5f5f5" className="react-loading" />
+        }
+      >
+        <App />
+      </Suspense>
+    </div>
+  );
+};
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
+    <Loading />
   </React.StrictMode>
 );
 

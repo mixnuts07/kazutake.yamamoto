@@ -1,38 +1,494 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Assistant:wght@300&family=Roboto:ital,wght@0,100;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Assistant:wght@300&family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Assistant:wght@300&family=Roboto:wght@100;400&family=Ubuntu:wght@300&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* -----common----- */
+html {
+  background-color: rgb(0, 30, 34);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes fade-in-to-up {
+  0% {
+    background-color: rgb(0, 30, 34);
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    background-color: rgb(0, 30, 34);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-.App-header {
-  background-color: #282c34;
+body {
+  text-align: center;
+  background-color: rgb(0, 30, 34);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: whitesmoke;
 }
 
-.App-link {
-  color: #61dafb;
+/* -----common-parts----- */
+.title-section {
+  text-decoration: underline;
+  opacity: 0.6;
+  text-align: left;
+  margin-top: 100px;
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* -----Header----- */
+.header {
+  width: 100vw;
+  margin: 0vh auto;
+  height: 5vh;
+  background: rgba(0, 30, 34, 0.3);
+  padding: 3vh 5vw 0vh 5vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.header .ul-left {
+  padding-left: 30vw;
+  margin-top: 0px;
+}
+.header .ul-right {
+  padding-right: 30vw;
+  margin-top: 0px;
+}
+@media screen and (max-width: 480px) {
+  .header .ul-left {
+    padding-left: 2vh;
   }
-  to {
-    transform: rotate(360deg);
+  .header .ul-right {
+    padding-right: 2vh;
+  }
+}
+.github {
+  animation-name: rotate-y;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes rotate-y {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.header .name {
+  font-family: "Roboto", sans-serif;
+  opacity: 1;
+}
+.header a {
+  color: whitesmoke;
+}
+.header ul {
+  display: flex;
+}
+.header li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+.header .ul-left .name {
+  margin-top: 0px;
+}
+/* -----Three-obj----- */
+.three-obj {
+  margin-top: 10vh;
+  width: 38vw;
+  height: 30vh;
+  opacity: 0;
+  animation-name: fade-in-to-up;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 480px) {
+  .three-obj {
+    width: 90vw;
+  }
+}
+/* -----Profile----- */
+.profile {
+  width: 40vw;
+  margin-top: 5vh;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  animation-name: fade-in-to-up;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.profile .name {
+  width: 40vw;
+  text-align: center;
+  letter-spacing: 0.08em;
+  font-size: 1.4em;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+}
+.profile .birth-sns {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.profile .my-birth {
+  letter-spacing: 0.2em;
+  margin-top: 0.11vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7em;
+}
+.profile .sns-icon {
+  margin-top: 0.1vh;
+}
+.profile .sns-icon-el {
+  margin-left: 0.3em;
+}
+.profile .icon-style {
+  color: whitesmoke;
+}
+.profile .link-name {
+  color: whitesmoke;
+  text-decoration: none;
+  border-bottom: dashed 2px gray;
+  border-bottom-width: thin;
+}
+.profile .face-des {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.profile img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 3px solid whitesmoke;
+}
+@media screen and (max-width: 480px) {
+  .profile {
+    width: 80vw;
+  }
+  .profile .name {
+    letter-spacing: 0.05em;
+    font-size: 1em;
+    width: 100%;
+  }
+  .profile .birth-sns {
+    flex-direction: column;
+  }
+  .profile .face-des {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .profile img {
+    margin-top: 1vh;
+    width: 70px;
+    height: 70px;
+    border: 1.5px solid whitesmoke;
+    align-items: right;
+  }
+}
+.profile .description {
+  letter-spacing: 0.1px;
+  line-height: 1.7em;
+  font-size: 0.8em;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+}
+/* -----Career----- */
+.career {
+  width: 40vw;
+  opacity: 0;
+  animation-name: fade-in-to-up;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.career .container {
+  width: 100%;
+  display: flex;
+}
+.bio {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+  width: 100%;
+}
+.bio .left {
+  font-family: "Roboto", sans-serif;
+}
+.bio .right {
+  letter-spacing: 0.01em;
+  font-family: "Roboto", sans-serif;
+}
+.bio .long {
+  white-space: pre-wrap;
+}
+@media screen and (max-width: 480px) {
+  .career {
+    width: 80vw;
+  }
+  .career .right {
+    font-size: 0.8em;
+    text-align: right;
+  }
+}
+/* -----Skills----- */
+.skills {
+  width: 40vw;
+  opacity: 0;
+  animation-name: fade-in-to-up;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.skills .skill-table {
+  border: none;
+  margin: 0 auto;
+}
+.skills .skill-table tr {
+  height: 70px;
+}
+.skills .skill-table td {
+  padding: 20px;
+}
+.skills .link-name {
+  text-decoration: none;
+  color: whitesmoke;
+  border-bottom: dashed 2px gray;
+  border-bottom-width: thin;
+  font-family: "Futura";
+}
+
+.skills .icon-color {
+  color: whitesmoke;
+}
+@media screen and (max-width: 480px) {
+  .skills {
+    width: 80vw;
+  }
+  .skill-table .link-name {
+    font-size: 14px;
+  }
+}
+/* -----Works----- */
+.works {
+  width: 40vw;
+  opacity: 0;
+  position: relative;
+  animation-name: fade-in-to-up;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.works .work-list {
+  align-items: center;
+  margin: 0 auto;
+}
+.works .work-list .work-item {
+  width: 13vw;
+  height: 13vh;
+}
+@media screen and (max-width: 480px) {
+  .works {
+    width: 80vw;
+  }
+}
+/* -----Works-Modal----- */
+.works-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42vw;
+  height: 42vh;
+  background-color: rgb(0, 30, 34);
+  color: whitesmoke;
+  border: 5px solid whitesmoke;
+  box-shadow: 24px;
+  padding: 4px;
+  border-radius: "0.5em";
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(0.1em + 2vmin);
+}
+@media screen and (max-width: 480px) {
+  .works-modal {
+    width: 80vw;
+    height: 60vh;
+  }
+}
+.works-modal .modal-table {
+  border: none;
+  table-layout: fixed;
+}
+.works-modal .modal-table td {
+  padding: 0px 2em;
+}
+.works-modal .cases {
+  text-decoration: underline gray;
+  font-family: "Futura";
+}
+.works-modal .priority {
+  line-height: 0px;
+  font-family: "Roboto", sans-serif;
+}
+/* -----SelfDev----- */
+.self-dev {
+  width: 40vw;
+  opacity: 0;
+  position: relative;
+  animation-name: fade-in-to-up;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.self-dev .self-dev-list {
+  align-items: center;
+  margin: 0 auto;
+}
+.self-dev .self-dev-list .self-dev-item {
+  width: 13vw;
+  height: 13vh;
+}
+@media screen and (max-width: 480px) {
+  .self-dev {
+    width: 80vw;
+  }
+}
+/* -----SelfDev-Modal----- */
+.self-dev-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 40vh;
+  background-color: rgb(0, 30, 34);
+  color: whitesmoke;
+  border: 5px solid whitesmoke;
+  box-shadow: 24px;
+  padding: 4px;
+  border-radius: 0.5em;
+}
+.self-dev-modal .dev-container {
+  margin: auto;
+}
+.self-dev-modal .img {
+  width: 100px;
+  height: 100px;
+  border-radius: 2px;
+}
+.self-dev-modal .description {
+  margin-top: 5px;
+}
+.self-dev-modal .link {
+  letter-spacing: 2px;
+  line-height: 40px;
+}
+.close-button {
+  position: absolute;
+  text-align: center;
+  bottom: 5%;
+}
+@media screen and (max-width: 480px) {
+  .self-dev-modal {
+    width: 80vw;
+  }
+}
+/* -----Hooter----- */
+.footer {
+  width: 40vw;
+  opacity: 0;
+  animation-name: fade-in-to-up;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.footer .link-name {
+  text-decoration: dotted;
+  color: whitesmoke;
+  border-bottom: dashed 2px gray;
+  border-bottom-width: thin;
+  font-family: "Futura";
+}
+
+.footer .copy-right {
+  font-size: 15px;
+  color: whitesmoke;
+  opacity: 0.5;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    width: 80vw;
+  }
+  .footer .copy-right {
+    font-size: 0.7em;
+    text-align: center;
+  }
+}
+/* -----Loading----- */
+.loading-app {
+  text-align: center;
+  background-color: rgb(0, 30, 34);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Futura";
+  opacity: 0;
+  animation-name: fade-in;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
