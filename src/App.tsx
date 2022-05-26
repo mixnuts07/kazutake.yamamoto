@@ -10,15 +10,19 @@ import Skills from "./components/Skills";
 import SelfDev from "./components/SelfDev";
 import Works from "./components/Works";
 import Footer from "./components/Footer";
+import { TFunction } from "i18next";
 
-const App = () => {
-  const [t, i18n] = useTranslation();
+const App: React.FC = (): JSX.Element => {
+  interface TF {
+    t: TFunction | undefined;
+  }
+  const [t, i18n] = useTranslation<TF>();
   const [lang, setLang] = useState("ja");
 
   useEffect(() => {
     i18n.changeLanguage(lang);
   }, [lang, i18n]);
-  const ChangeLang = () => {
+  const ChangeLang = (): void => {
     setLang(lang === "en" ? "ja" : "en");
   };
   return (

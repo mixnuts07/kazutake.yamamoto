@@ -5,7 +5,7 @@ import CancelPresentationIcon from "@mui/icons-material/CancelPresentation";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 
-const Works = ({ t }: any) => {
+const Works = ({ t }: any): JSX.Element => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
