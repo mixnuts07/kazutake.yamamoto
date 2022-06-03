@@ -34,7 +34,7 @@ function CubeFrame(props) {
   );
 }
 
-function ThreeObj() {
+const ThreeObj = () => {
   return (
     <div className="three-obj">
       <Canvas>
@@ -55,6 +55,6 @@ function ThreeObj() {
       </Canvas>
     </div>
   );
-}
+};
 
 export default ThreeObj;

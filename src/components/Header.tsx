@@ -1,7 +1,9 @@
 import "../App.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GTranslateIcon from "@mui/icons-material/GTranslate";
+import React from "react";
 
+// 期限間に合えばchangeLang:anyの型定義再考
 const Header = ({ ChangeLang = (f: any) => f }) => {
   return (
     <header className="header">
