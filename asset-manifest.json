@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/kazutake.yamamoto/static/css/main.c7bf456f.css",
-    "main.js": "/kazutake.yamamoto/static/js/main.c51b4574.js",
-    "static/js/233.22e9bba4.chunk.js": "/kazutake.yamamoto/static/js/233.22e9bba4.chunk.js",
+    "main.js": "/kazutake.yamamoto/static/js/main.412e803b.js",
+    "static/js/233.8152bd87.chunk.js": "/kazutake.yamamoto/static/js/233.8152bd87.chunk.js",
     "static/js/787.dd4029b4.chunk.js": "/kazutake.yamamoto/static/js/787.dd4029b4.chunk.js",
     "static/js/1.92ad30a9.chunk.js": "/kazutake.yamamoto/static/js/1.92ad30a9.chunk.js",
     "static/media/face.jpg": "/kazutake.yamamoto/static/media/face.bee709af2b383f9938b2.jpg",
     "index.html": "/kazutake.yamamoto/index.html",
     "main.c7bf456f.css.map": "/kazutake.yamamoto/static/css/main.c7bf456f.css.map",
-    "main.c51b4574.js.map": "/kazutake.yamamoto/static/js/main.c51b4574.js.map",
-    "233.22e9bba4.chunk.js.map": "/kazutake.yamamoto/static/js/233.22e9bba4.chunk.js.map",
+    "main.412e803b.js.map": "/kazutake.yamamoto/static/js/main.412e803b.js.map",
+    "233.8152bd87.chunk.js.map": "/kazutake.yamamoto/static/js/233.8152bd87.chunk.js.map",
     "787.dd4029b4.chunk.js.map": "/kazutake.yamamoto/static/js/787.dd4029b4.chunk.js.map",
     "1.92ad30a9.chunk.js.map": "/kazutake.yamamoto/static/js/1.92ad30a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7bf456f.css",
-    "static/js/main.c51b4574.js"
+    "static/js/main.412e803b.js"
   ]
 }
