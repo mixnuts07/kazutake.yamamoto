@@ -14,7 +14,7 @@ const Header = ({ ChangeLang = (f: any) => f }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <GitHubIcon className="github" />
+            <GitHubIcon />
           </a>
         </li>
         <li>

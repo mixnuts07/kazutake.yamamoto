@@ -92,7 +92,7 @@ const SelfDev = ({ t }) => {
               {t("self_dev_title2")}
             </Typography>
             <a
-              href="https://mixnuts07.github.io/kazutake.yamamoto/"
+              href="https://github.com/mixnuts07/kazutake.yamamoto/blob/master/.github/README.md"
               target="_blank"
               rel="noreferrer"
               className="link-name"
